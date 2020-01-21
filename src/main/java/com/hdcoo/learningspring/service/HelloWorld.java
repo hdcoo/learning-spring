@@ -2,7 +2,6 @@ package com.hdcoo.learningspring.service;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -25,11 +24,6 @@ public class HelloWorld {
     }
 
     public String sleep(String sex, int duration) {
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException err) {
-            System.out.println(err.toString());
-        }
         return selectSex(sex).sleep(duration);
     }
 
